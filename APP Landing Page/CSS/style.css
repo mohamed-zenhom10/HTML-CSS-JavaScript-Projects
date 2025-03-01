@@ -1,0 +1,636 @@
+/* Start Variables */
+:root {
+    --black: #272D3B;
+    --red: #ED176F;
+    --coral: #F7817F;
+    --gradient:  linear-gradient(90deg, #ED176F, #F7817F);
+    --main-transition : 0.4s;
+}
+/* End Variables */
+/* Start Global Styling */
+*{
+    font-family: "Poppins", serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*::selection {
+    background: var(--red);
+    color: #fff;
+}
+html{
+    scroll-behavior: smooth;
+    font-size: 10px;
+    overflow-x: hidden;
+    scroll-padding-top: 5rem;
+}
+section {
+    min-height: 100vh;
+    padding: 0 20px;
+    padding-top: 8rem;
+}
+.btn {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 30px;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    background-image: var(--gradient);
+    border: none;
+    border-radius: 40px;
+}
+.btn a{
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+}
+.heading {
+    font-size: 6rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--red);
+    font-weight: 400;
+}
+@media (max-width: 850px) {
+    .heading {
+        font-size: 4rem;
+    }
+}
+/* End Global Styling */
+/* Start Header Styling */
+header {
+    display: flex;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5rem 8rem;
+    background: var(--black);
+    z-index: 100;
+    border-bottom: 1px solid rgb(225,225,225,0.2);
+}
+header .logo {
+    font-size: 3rem;
+    text-decoration: none;
+    font-weight: 500;
+    color: white;
+    transition: var(--main-transition);
+}
+header .logo:hover {
+    color: var(--red);
+}
+header .navbar a{
+    margin-left: 15px;
+    font-size: 2rem;
+    text-decoration: none;
+    color: white;
+    transition: var(--main-transition);
+}
+header .navbar a:hover {
+    color: var(--red);
+}
+#menu-icon {
+    font-size: 2.5rem;
+    display: none;
+}
+@media (max-width: 899px) {
+    .navbar {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background: var(--black);
+        border: 1px solid rgb(225,225,225,0.2);
+        height: 450px;
+        display: none;
+    }
+    .active {
+        display: block;
+    }
+    .navbar a {
+        display: block;
+        text-align: center;
+        margin: 20px 0;
+        padding: 10px;
+    }
+    #menu-icon {
+        display: block;
+        color: white;
+        cursor: pointer;
+        z-index: 100;
+    }
+}
+@media (max-width: 550px) {
+    header {
+        padding: 2.5rem 4rem;
+    }
+}
+/* End Header Styling */
+/* Start Home Styling */
+.home {
+    background-color: var(--black);
+    padding-top: 8rem;
+}
+.home .title {
+    color: white;
+    font-size: 5rem;
+    text-align: center;
+}
+.home p {
+    color: white;
+    font-size: 2rem;
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+    font-weight: normal;
+}
+@media (max-width: 700px) {
+    .home p {
+        width: 100%;
+    }
+}
+/* End Home Styling */
+/* Start Features Styling */
+.features {
+    padding-top: 8rem;
+}
+.features .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(300px,1fr));
+    gap: 20px;
+}
+.features .container .box{
+    cursor: pointer;
+    background-color: rgb(255, 233, 233);
+    transition: var(--main-transition);
+}
+.features .container .box:hover {
+    background-image: var(--gradient);
+}
+.features .container .box .iocn i{
+    width: 100%;
+    text-align: center;
+    font-size: 5rem;
+    margin: 15px 0;
+    color: var(--red);
+}
+.features .container .box h3 {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: normal;
+}
+.features .container .box p {
+    text-align: center;
+    font-size: 1.5rem;
+    color: rgb(0,0,0,0.5);
+    margin: 10px 0;
+}
+.features .container .box:hover h3,
+.features .container .box:hover .iocn i,
+.features .container .box:hover p {
+    color: white;
+}
+/* End Features Styling */
+/* Start About Styling */
+.about {
+    padding-top: 8rem;
+}
+.about .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.about .content .info {
+    width: 50%;
+}
+.about .content .info h3 {
+    font-size: 3.5rem;
+    font-weight: 500;
+}
+.about .content .info p {
+    font-size: 1.5rem;
+    color: rgb(0,0,0,0.5);
+    margin-top: 30px;
+}
+.about .content .info .icons {
+    display: flex;
+    margin-top: 20px;
+    gap: 10px;
+}
+.about .content .info .icons .icon-1,
+.about .content .info .icons .icon-2 {
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.about .content .info .icons .icon-1::after,
+.about .content .info .icons .icon-2::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: var(--main-transition);
+}
+.about .content .info .icons .icon-1:hover::after,
+.about .content .info .icons .icon-2:hover::after {
+    background-color: rgb(225,225,225,0.9);
+}
+.about .content .info .icons .icon-1  .icon i,
+.about .content .info .icons .icon-2 .icon i {
+    font-size: 2.5rem;
+}
+.about .content .info .icons .icon-1 .text h4,
+.about .content .info .icons .icon-2 .text h4 {
+    font-size: 1.5rem;
+}
+.about img {
+    width: 300px;
+}
+@media (max-width: 830px) {
+    .about .content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about .content .info {
+        width: 100%;
+    }
+    .about img {
+        width: 200px;
+        gap: 0;
+    }
+    .about .content .info .icons .icon-1,
+    .about .content .info .icons .icon-2 {
+        margin: 0 auto;
+        gap: 0;
+    }
+}
+/* End About Styling */
+/* Start Usage Styling */
+.usage .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    text-align: right;
+}
+.usage .container .left-container,
+.usage .container .right-container {
+    width: 30%;
+}
+.usage .container .left-container .top-part i,
+.usage .container .right-container .top-part i{
+    font-size: 5rem;
+    color: var(--red);
+    margin: 10px 0;
+}
+.usage .container .left-container .top-part h3,
+.usage .container .right-container .top-part h3 {
+    font-size: 3rem;
+    font-weight: 400;
+}
+.usage .container .left-container .top-part p,
+.usage .container .right-container .top-part p{
+    font-size: 1.5rem;
+    color: rgb(0,0,0,0.5);
+}
+.usage .container .left-container .bottom-part i,
+.usage .container .right-container .bottom-part i{
+    font-size: 5rem;
+    color: var(--red);
+    margin: 10px 0;
+}
+.usage .container .left-container .bottom-part h3,
+.usage .container .right-container .bottom-part h3 {
+    font-size: 3rem;
+    font-weight: 400;
+}
+.usage .container .left-container .bottom-part p,
+.usage .container .right-container .bottom-part p{
+    font-size: 1.5rem;
+    color: rgb(0,0,0,0.5);
+}
+@media (max-width: 900px) {
+    .usage img {
+        display: none;
+    }
+    .usage .container {
+        text-align: center;
+        gap: 0;
+    }
+    .usage .container .left-container,
+    .usage .container .right-container {
+        width: 100%;
+    }
+}
+/* End Usage Styling */
+/* Start Review Styling */
+.review .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.review .container .box {
+    width: 300px;
+    border: 1px solid rgb(225,225,225,0.2);
+    box-shadow: 0 5px 10px rgb(0,0,0,0.5);
+    padding: 20px;
+}
+.review .container .box h4 {
+    font-size: 3rem;
+    margin: 10px 0;
+    text-align: center;
+    font-weight: 400;
+}
+.review .container .box p {
+    text-align: center;
+    color: rgb(0,0,0,0.5);
+    font-size: 1.3rem;
+}
+.review img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+.review .container .starts {
+    margin: 10px 0;
+}
+.review .container .starts i {
+    font-size: 2rem;
+    text-align: center;
+    position: relative;
+    left: 80px;
+    color: var(--red);
+}
+/* End Review Styling */
+/* Start Pricing Styling */
+.pricing .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.pricing .container .box {
+    border: 1px solid rgb(0,0,0,0.5);
+    width: 300px;
+    height: 370px;
+    box-shadow: 0 5px 10px rgb(0,0,0,0.5);
+    position: relative;
+    padding: 10px 0;
+}
+.pricing .container .box .price {
+    font-size: 2rem;
+    color: rgb(0,0,0,0.5);
+    text-align: center;
+    margin: 10px 0;
+}
+.pricing .container .box .price span {
+    font-size: 4rem;
+    color : black;
+    font-weight: 400;
+}
+.pricing .container .box .head {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    height: 70px;
+    background-image: var(--gradient);
+    text-align: center;
+    color: white;
+    font-size: 4rem;
+    line-height: 70px;
+}
+.pricing .container .box .info {
+    margin-top: 100px;
+    width: 100%;
+    position: relative;
+}
+.pricing .container .box .info::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--red);
+    bottom: 0;
+    left: 0;
+}
+.pricing .container .box .info p{
+    font-size: 1.8rem;
+    text-align: center;
+    color: rgb(0,0,0,0.5);
+    padding: 7px 0;
+}
+.pricing .container .box button {
+    background-image: var(--gradient);
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    color: white;
+    font-size: 1.6rem;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+    padding: 10px 20px;
+    transform: translateY(10px);
+}
+/* End Pricing Styling */
+/* Start Contact Styling */
+.contact {
+    position: relative;
+}
+.contact::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    background-color: var(--black);
+    width: 100%;
+    height: 50%;
+    z-index: -1000;
+}
+.contact form {
+    width: 70%;
+    margin: 0 auto;
+    border: 1px solid rgb(225,225,225,0.2);
+    box-shadow: 0 5px 10px rgb(0,0,0,0.5);
+    padding: 10px;
+    position: relative;
+    z-index: 1000;
+    background-color: white;
+}
+.contact form .input-box {
+    width: 100%;
+    height: 40px;
+    margin: 15px 0;
+    position: relative;
+    border: none;
+}
+.contact form .input-box label {
+    color: var(--red);
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 0;
+    font-size: 1.5rem;
+    transition: var(--main-transition);
+}
+.contact form .input-box input {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid rgb(0,0,0,0.5);
+    padding: 0 10px 0 0;
+    font-size: 1.2rem;
+    transition: var(--main-transition);
+}
+.contact form .input-box input:focus {
+    border-bottom: 2px solid var(--red);
+}
+.contact form .input-box input:focus ~ label,
+.contact form .input-box input:valid ~ label{
+    top: 0;
+}
+.contact form .textArea {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    border: none;
+}
+.contact form textarea {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    resize: none;
+    border: none;
+    border-bottom: 2px solid rgb(0,0,0,0.5);
+    transition: var(--main-transition);
+    font-size: 1.3rem;
+}
+.contact form .textArea label {
+    position: absolute;
+    top: 0;
+    padding: 0 10px 0 0;
+    font-size: 1.5rem;
+    color: var(--red);
+    transition: var(--main-transition);
+}
+.contact form textarea:focus {
+    outline: none;
+    border-bottom: 2px solid var(--red);
+}
+.contact form textarea:focus ~ label {
+    top: -15px;
+}
+.contact form button {
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    background-image: var(--gradient);
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+    border-radius: 40px;
+    transition: var(--main-transition);
+}
+.contact form button:hover {
+    transform: scale(1.01);
+}
+@media (max-width: 850px) {
+    .contact form {
+        width: 90%;
+    }
+}
+/* End Contact Styling */
+/* Start Footer Styling */
+footer {
+    height: 150px;
+    background-color: var(--black);
+    padding: 0 20px;
+}
+footer .social {
+    transform: translateX(-50%);
+    left: 50%;
+    position: absolute;
+}
+footer .social a{
+    display: inline-flex;
+    height: 50px;
+    width: 50px;
+    border: none;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: var(--black);
+    text-decoration: none;
+    font-size: 2rem;
+    margin: 0 10px;
+    transition: var(--main-transition);
+}
+footer .social a:hover {
+    transform: translateY(-10px);
+}
+footer p {
+    color: white;
+    text-align: center;
+    position: relative;
+    font-size: 2rem;
+    top: 80px;
+}
+@media (max-width: 650px) {
+    footer .social a {
+        margin: 0 5px;
+        width: 40px;
+        height: 40px;
+    }
+    footer p {
+        font-size: 1.6rem;
+    }
+}
+@media (max-width: 480px) {
+    footer .social a {
+        margin: 0 3px;
+        width: 35px;
+        height: 35px;
+    }
+    footer p {
+        font-size: 1.3rem;
+    }
+}
+/* End Footer Styling */
+/* Start Scrollbar Styling */
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--red);
+}
+/* End Scrollbar Styling */
