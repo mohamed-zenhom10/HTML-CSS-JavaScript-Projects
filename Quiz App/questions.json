@@ -1,0 +1,82 @@
+[
+    {
+        "title": "What does HTML stand for?",
+        "answer_1": "HyperText Markup Language",
+        "answer_2": "HighText Machine Language",
+        "answer_3": "Hyperlink and Text Markup Language",
+        "answer_4": "Home Tool Markup Language",
+        "correct": "HyperText Markup Language"
+    },
+    {
+        "title": "Which HTML tag is used to define an internal style sheet?",
+        "answer_1": "<style>",
+        "answer_2": "<script>",
+        "answer_3": "<css>",
+        "answer_4": "<link>",
+        "correct": "<style>"
+    },
+    {
+        "title": "Which CSS property is used to change the text color of an element?",
+        "answer_1": "text-color",
+        "answer_2": "color",
+        "answer_3": "font-color",
+        "answer_4": "foreground-color",
+        "correct": "color"
+    },
+    {
+        "title": "How do you create a function in JavaScript?",
+        "answer_1": "function myFunction()",
+        "answer_2": "def myFunction()",
+        "answer_3": "create myFunction()",
+        "answer_4": "function:myFunction()",
+        "correct": "function myFunction()"
+    },
+    {
+        "title": "Which event occurs when the user clicks on an HTML element?",
+        "answer_1": "onmouseover",
+        "answer_2": "onchange",
+        "answer_3": "onclick",
+        "answer_4": "onmouseclick",
+        "correct": "onclick"
+    },
+    {
+        "title": "Which HTML tag is used to display a picture on a webpage?",
+        "answer_1": "<picture>",
+        "answer_2": "<img>",
+        "answer_3": "<src>",
+        "answer_4": "<image>",
+        "correct": "<img>"
+    },
+    {
+        "title": "How can you make a list that lists the items with bullets in HTML?",
+        "answer_1": "<ul>",
+        "answer_2": "<ol>",
+        "answer_3": "<li>",
+        "answer_4": "<dl>",
+        "correct": "<ul>"
+    },
+    {
+        "title": "Which property is used to change the font of an element in CSS?",
+        "answer_1": "font-style",
+        "answer_2": "text-style",
+        "answer_3": "font-family",
+        "answer_4": "font-weight",
+        "correct": "font-family"
+    },
+    {
+        "title": "Which symbol is used for comments in JavaScript?",
+        "answer_1": "//",
+        "answer_2": "/* */",
+        "answer_3": "#",
+        "answer_4": "<!-- -->",
+        "correct": "//"
+    },
+    {
+        "title": "How do you select an element with id 'demo' in CSS?",
+        "answer_1": "#demo",
+        "answer_2": ".demo",
+        "answer_3": "demo",
+        "answer_4": "*demo",
+        "correct": "#demo"
+    }
+]
